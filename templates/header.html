@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div class="container">
+    <header class="d-flex justify-content-center py-3">
+      <ul class="nav nav-pills">
+          {% if nav_bar_pos == 0 %}
+            <li class="nav-item"><a href="{{url_for('home')}}" class="nav-link active" aria-current="page">Конвертер валют</a></li>
+            <li class="nav-item"><a href="{{url_for('table')}}" class="nav-link">Таблиця</a></li>
+          {% elif nav_bar_pos == 1 %}
+            <li class="nav-item"><a href="{{url_for('home')}}" class="nav-link" aria-current="page">Конвертер валют</a></li>
+            <li class="nav-item"><a href="{{url_for('table')}}" class="nav-link active">Таблиця</a></li>
+          {% endif %}
+      </ul>
+    </header>
+  </div>
+</body>
+</html>
